@@ -1,5 +1,5 @@
 {
-    "name": "push-edx/flarum-ext-chat",
+    "name": "dnc-f0r3v3r/flarum-ext-chat",
     "description": "Realtime chat.",
     "keywords": ["chat", "flarum", "pushedx", "push-edx"],
     "type": "flarum-extension",
