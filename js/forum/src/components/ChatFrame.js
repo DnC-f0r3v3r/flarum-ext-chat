@@ -281,9 +281,9 @@ export class ChatFrame extends Component {
                 onmouseup: this.flagUp.bind(this)
              }, [
                     m('div', {id: 'chat-header', onclick: this.toggle.bind(this)}, [
-                        m('h2', 'PushEdx Chat'),
+                        m('h2', 'Member Chat'),
                         m('p', {
-                            'data-title': this.status.isMuted ? 'Habilitar sonidos' : 'Deshabilitar sonidos',
+                            'data-title': this.status.isMuted ? 'Enable Sounds' : 'Disable Sounds',
                         },[
                                 m('img', {
                                     src: this.status.isMuted ? soundMuted : soundNormal,
@@ -291,7 +291,7 @@ export class ChatFrame extends Component {
                                 }),
                             ]),
                         m('p', {
-                            'data-title': this.status.notify ? 'Deshabilitar notificaciones' : 'Habilitar notificaciones',
+                            'data-title': this.status.notify ? 'Disable Notifications' : 'Enable Notifications',
                         },[
                             m('img', {
                                 src: this.status.notify ? notifyNormal : notifyDisabled,
@@ -325,7 +325,7 @@ export class ChatFrame extends Component {
                         className: this.reachedLimit() ? 'reaching-limit' : '',
                         maxlength: maxLength,
                         disabled: !app.forum.attribute('canPostChat'),
-                        placeholder: app.forum.attribute('canPostChat') ? '' : 'Solo los usuarios registrados pueden usar el chat',
+                        placeholder: app.forum.attribute('canPostChat') ? '' : 'You must register in the forum to use the chat.',
                         onkeyup: this.process.bind(this),
                         onkeydown: this.checkLimit.bind(this),
                         config: this.refocus.bind(this)
